@@ -24,7 +24,7 @@ public class AppTest
         
         options.addArguments("--headless");
 	    
-        String mygecko=System.getenv("home path");
+        String mygecko=System.getenv("HOME");
 
 	System.out.println("Opening http://13.58.167.208:8080/helloedureka");
 
