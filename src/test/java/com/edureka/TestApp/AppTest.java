@@ -24,7 +24,7 @@ public class AppTest
         
         options.addArguments("--headless");
 	    
-        String mygecko=System.getenv("HOME") + "/home/ubuntu/Downloads/geckodriver";
+        String mygecko=System.getenv("/home/ubuntu/Downloads/geckodriver");
 
 	System.out.println("Opening http://13.58.167.208:8080/helloedureka");
 
