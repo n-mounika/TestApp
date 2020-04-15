@@ -28,7 +28,7 @@ public class App
         
         WebDriverWait mywait = new WebDriverWait(driver,10);
         
-        driver.get("http://localhost:8080/helloedureka");
+        driver.get("http://13.58.167.208:8082/helloedureka");
         
         System.out.println(driver.getPageSource());
         
