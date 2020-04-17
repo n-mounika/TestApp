@@ -17,8 +17,16 @@ public class AppTest
 	
     @Test
     void testHelloEdureka() throws Exception  {
-		
-	WebDriver driver;
+	
+	String path = "/usr/bin/firefox";
+	String display = ":0";
+
+	FirefoxProfile profile = new FirefoxProfile(); // here was createDefaultFirefoxProfile();
+	FirefoxBinary binary = new FirefoxBinary(new File(path));
+
+	binary.setEnvironmentProperty("DISPLAY", display);
+	WebDriver driver = new FirefoxDriver(binary, profile, cap);	
+
 	    
 	FirefoxOptions options = new FirefoxOptions();
         
@@ -36,11 +44,11 @@ public class AppTest
         
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
-	System.out.println("Opening http://master:8080/helloedureka");
+	System.out.println("Opening http:/13.58.167.208:8082/helloedureka");
 
 	// You may need to change it to IP if it does not work
 
-        driver.get("http://master:8080/helloedureka");
+        driver.get("http://13.58.167.208:8082/helloedureka");
         
         Thread.sleep(5000);
         
