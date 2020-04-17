@@ -18,14 +18,7 @@ public class AppTest
     @Test
     void testHelloEdureka() throws Exception  {
 	
-	String path = "/usr/bin/firefox";
-	String display = ":0";
-
-	FirefoxProfile profile = new FirefoxProfile(); // here was createDefaultFirefoxProfile();
-	FirefoxBinary binary = new FirefoxBinary(new File(path));
-
-	binary.setEnvironmentProperty("DISPLAY", display);
-	WebDriver driver = new FirefoxDriver(binary, profile, cap);	
+	WebDriver driver;	
 
 	    
 	FirefoxOptions options = new FirefoxOptions();
